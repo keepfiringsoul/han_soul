@@ -1,0 +1,117 @@
+﻿/* Start http://www.cursors-4u.com */ * {cursor: url(http://cur.cursors-4u.net/others/oth-7/oth687.cur), auto !important;} /* End http://www.cursors-4u.com */
+
+#left_1{
+      width: 100px;
+    padding: 50px;
+    position: fixed;
+        line-height: 23px;
+}
+
+#left_2{
+  position: fixed;
+  left: 140px;
+  bottom: 70px;
+  width: 40px;
+}
+
+
+#left_3{
+      margin: 50px;
+    position: fixed;
+    left: 170px;
+}
+
+#left_4{
+        margin: 100px;
+    position: fixed;
+    left: 300px;
+}
+
+
+.arrows{
+  width: 100px;
+  height: 600px;
+  position: absolute;
+
+}
+
+.menu{
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+  transform: rotate(90deg);
+  margin-top: 80px;
+  width: 100px;
+  text-align: center;
+}
+
+.year{
+     line-height: 23px;
+}
+
+.menu:hover{
+  text-decoration:line-through;
+}
+
+.year:hover{
+  text-decoration:line-through;
+}
+
+.munu:visited{
+ text-decoration:line-through;
+}
+
+
+*{
+  margin: 0; padding: 0;
+}
+.slide{
+  width: 800px;
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  -webkit-transition: all 0.3s cubic-bezier(1,.01,.32,1);
+  -moz-transition: all 0.3s cubic-bezier(1,.01,.32,1);
+  -o-transition: all 0.3s cubic-bezier(1,.01,.32,1);
+  -ms-transition: all 0.3s cubic-bezier(1,.01,.32,1);
+  transition: all 0.3s cubic-bezier(1,.01,.32,1); 
+}
+.slide ul{
+
+  position: absolute;
+  top:0;
+  left:0;
+  font-size: 0;
+}
+.slide ul li{
+  display: inline-block;
+  line-height:100px;
+  text-align:center;
+}
+.slide ul li img{
+  width:800px;
+  height:auto;
+  vertical-align:middle;
+  margin-top: -300px;
+}
+#back{
+  position: absolute;
+  left: 0;
+  z-index: 1;
+}
+
+#back:hover{
+  cursor: url(http://cur.cursors-4u.net/others/oth-7/oth692.cur), auto !important; /* End http://www.cursors-4u.com */
+
+}
+
+#next{
+  position: absolute;
+  right: 0;
+  z-index: 1;
+
+}
+
+#next:hover{
+ cursor: url(http://cur.cursors-4u.net/others/oth-7/oth689.cur), auto !important;/* End http://www.cursors-4u.com */
+}
