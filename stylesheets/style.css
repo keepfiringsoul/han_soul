@@ -1,10 +1,69 @@
 ﻿/* Start http://www.cursors-4u.com */ * {cursor: url(http://cur.cursors-4u.net/others/oth-7/oth687.cur), auto !important;} /* End http://www.cursors-4u.com */
 
+#closeBt{
+  opacity: 1;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  top: 5%;
+  left: 93%;
+  cursor: url(http://cur.cursors-4u.net/others/oth-7/oth683.cur), auto !important;
+  transition: 0.5s;
+  background-image: url('../images/closeBt.png');
+  display: none;
+}
+
+#screen{
+  background: black;
+  min-height: 100%;
+  min-width: 1024px;
+  
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+  
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: 0.5s;   
+  display: none;
+}
+
+#dp_box{
+  position: absolute;
+  top: 3%;
+  transition: 0.5s; 
+  left: 100px;
+  display:none;
+  width: 70%;
+}
+
+#dp_box img{
+ width: 100%;
+ height: auto;
+ margin-bottom: 40px;
+}
+
+#t_box {
+  position: absolute;
+  top: 25%;
+  right: 110px;
+  opacity: 1;
+  color: #FFFFFF;
+  font: 12px 나눔고딕;
+  width: 220px;
+  display: none;
+  text-align: right;
+  line-height: 18px;
+}
+
+
 #left_1{
-      width: 100px;
-    padding: 50px;
-    position: fixed;
-        line-height: 23px;
+  width: 100px;
+  padding: 50px;
+  position: fixed;
+  line-height: 23px;
 }
 
 #left_2{
@@ -16,15 +75,15 @@
 
 
 #left_3{
-      margin: 50px;
-    position: fixed;
-    left: 170px;
+  margin: 50px;
+  position: fixed;
+  left: 170px;
 }
 
 #left_4{
-        margin: 100px;
-    position: fixed;
-    left: 300px;
+  margin: 100px;
+  position: fixed;
+  left: 300px;
 }
 
 
@@ -45,7 +104,7 @@
 }
 
 .year{
-     line-height: 23px;
+ line-height: 23px;
 }
 
 .menu:hover{
@@ -65,6 +124,7 @@
   margin: 0; padding: 0;
 }
 .slide{
+  display: none;
   width: 800px;
   height: 600px;
   overflow: hidden;
