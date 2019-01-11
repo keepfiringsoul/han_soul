@@ -68,15 +68,8 @@ var init = function() {
     };
     
   }
-};
 
-window.onload = function() {
-  init();
-
-};
-
-
-$(document).ready(function(){
+  $(document).ready(function(){
       var imgs;
       var img_count;
       var img_position = 1;
@@ -108,12 +101,13 @@ $(document).ready(function(){
           img_position++;
         }
       }
-
-
-      //이미지 끝까지 가면 버튼 사라지기
-
-
-      //첫 이미지로 돌아오기
-
-
     });
+  
+};
+
+window.onload = function() {
+  init();
+
+};
+
+
