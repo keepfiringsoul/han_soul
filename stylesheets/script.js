@@ -53,7 +53,7 @@ var init = function() {
     var d = document.createElement('li');
 /*    d.id='b_'+i;
     d.className = 'block';*/
-    d.innerHTML = "<img src=\"./img/"+i+".jpg\">";
+    d.innerHTML = "<img src=\"./images/"+i+".jpg\">";
    slide.appendChild(d);
 
     pf.push(d);
