@@ -4,34 +4,87 @@ body{
   color:#777;
 }
 
-#closeBt{
-  opacity: 1;
+#mailPop{
+  display: none;
+  width: 200px;
+  background-color: #333;
+  border: 1px solid #666;
+  opacity: 0.8;
+  color: white;
+  text-align: center;
+  padding: 50px;
+  top: 50%;
+  position: absolute;
+  left: 50%;
+
+}
+
+#telPop{
+  display: none;
+  width: 200px;
+  background-color: #333;
+  border: 1px solid #666;
+  opacity: 0.8;
+  color: white;
+  text-align: center;
+  padding: 50px;
+  top: 50%;
+  position: absolute;
+  left: 50%;
+}
+
+#logoBox{
+/*  display: none;*/
+      position: inherit;
+    top: 50%;
+    left: 50%;
+}
+
+.logos:hover{
+  cursor: url(http://cur.cursors-4u.net/others/oth-7/oth683.cur), auto !important;
+}
+
+.logos{
+  display: inline-block;
+      margin: 5px;
+}
+
+#fb{
+  background-image: url(../images/logo-02.png);
   width: 50px;
   height: 50px;
-  position: fixed;
-  top: 5%;
-  left: 93%;
-  cursor: url(http://cur.cursors-4u.net/others/oth-7/oth683.cur), auto !important;
-  transition: 0.5s;
-  background-image: url('../images/closeBt.png');
-  display: none;
+}
+
+#bh{
+  background-image: url(../images/logo-01.png);
+  width: 50px;
+  height: 50px;
+}
+
+#mail{
+  background-image: url(../images/logo-03.png);
+  width: 50px;
+  height: 50px;
+}
+
+#tel{
+  background-image: url(../images/logo-04.png);
+  width: 50px;
+  height: 50px;
 }
 
 #screen{
   background: black;
   min-height: 100%;
   min-width: 1024px;
-  
-  /* Set up proportionate scaling */
   width: 100%;
   height: auto;
-  
-  /* Set up positioning */
   position: fixed;
   top: 0;
   left: 0;
   transition: 0.5s;   
   display: none;
+  opacity: 0;
 }
 
 #dp_box{
@@ -41,6 +94,7 @@ body{
   left: 100px;
   display:none;
   width: 70%;
+  opacity: 0;
 }
 
 #dp_box img{
@@ -60,6 +114,7 @@ body{
   text-align: right;
   line-height: 18px;
   transition: 0.5s; 
+  opacity: 0;
 }
 
 
@@ -85,6 +140,7 @@ body{
   left: 170px;
   display: none;
   transition: 0.5s; 
+  opacity: 0;
 }
 
 #left_4{
@@ -138,6 +194,7 @@ body{
   position: relative;
   margin: 0 auto;
   transition: 0.5s; 
+  opacity: 0;
 }
 .slide ul{
 

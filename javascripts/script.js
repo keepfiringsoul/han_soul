@@ -40,8 +40,7 @@ var init = function() {
   mimgBt = document.querySelector('#mimgBt');
   ctBt = document.querySelector('#ctBt');
   left3 = document.querySelector('#left_3');
-
-  /* imgBt = document.querySelector('#imgBt');*/
+  logoBox = document.querySelector('#logoBox');
 
   screen.onclick = function(){
     screen.style['display'] = 'none';
@@ -56,15 +55,23 @@ var init = function() {
   imgBt.onclick = function(){
     slideBox.style['display'] = 'block';
     left3.style['display'] = 'block';
+    logoBox.style['display'] = 'none';
     setTimeout(function(){
-        slideBox.style['opacity'] = '1';
-        left3.style['opacity'] = '1';
-      },50000);
+      slideBox.style['opacity'] = '1';
+      left3.style['opacity'] = '1';
+      logoBox.style['opacity'] = '0';
+    },50);
   };
 
   ctBt.onclick = function(){
     left3.style['display'] = 'none';
     slideBox.style['display'] = 'none';
+    logoBox.style['display'] = 'block';
+    setTimeout(function(){
+      logoBox.style['opacity'] = '1';
+      slideBox.style['opacity'] = '0';
+      left3.style['opacity'] = '0';
+    },50);
   };
 
   var contentsFill = function(d) {
@@ -176,7 +183,7 @@ $(document).ready(function(){
   $( '.slide' ).attr( 'mx',item_Num );
 
   imgs = $(".slide ul");
- /* img_count = imgs.children().length;*/
+  /* img_count = imgs.children().length;*/
   val = $(".slide").attr("val"); //현재 이미지 번호를 가져옵니다
   mx = $(".slide").attr("mx");  //총 이미지 개수를 가져옵니다
   y1 = 0; //2018년의 시작
@@ -207,7 +214,7 @@ $(document).ready(function(){
         }*/
         if( val <= 0 ){ val = 0;}
         else{val--;}
-       
+
         imgs.animate({
           left:val*-800+'px'
         });
@@ -227,15 +234,15 @@ $(document).ready(function(){
       }
 
       function year1() {
-         
-        
+
+
         imgs.animate({
           left:y1*-800+'px'
         });
         $("#slide").attr('val',y1);
       }
       function year2() {
-        
+
         imgs.animate({
           left:y2*-800+'px'
         });
