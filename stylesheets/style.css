@@ -1,4 +1,8 @@
 ﻿/* Start http://www.cursors-4u.com */ * {cursor: url(http://cur.cursors-4u.net/others/oth-7/oth687.cur), auto !important;} /* End http://www.cursors-4u.com */
+body{
+  background-color: #111;
+  color:#777;
+}
 
 #closeBt{
   opacity: 1;
@@ -49,13 +53,13 @@
   position: absolute;
   top: 25%;
   right: 110px;
-  opacity: 1;
   color: #FFFFFF;
   font: 12px 나눔고딕;
   width: 220px;
   display: none;
   text-align: right;
   line-height: 18px;
+  transition: 0.5s; 
 }
 
 
@@ -71,6 +75,7 @@
   left: 140px;
   bottom: 70px;
   width: 40px;
+
 }
 
 
@@ -78,6 +83,8 @@
   margin: 50px;
   position: fixed;
   left: 170px;
+  display: none;
+  transition: 0.5s; 
 }
 
 #left_4{
@@ -126,15 +133,11 @@
 .slide{
   display: none;
   width: 800px;
-  height: 600px;
+  height: 450px;
   overflow: hidden;
   position: relative;
   margin: 0 auto;
-  -webkit-transition: all 0.3s cubic-bezier(1,.01,.32,1);
-  -moz-transition: all 0.3s cubic-bezier(1,.01,.32,1);
-  -o-transition: all 0.3s cubic-bezier(1,.01,.32,1);
-  -ms-transition: all 0.3s cubic-bezier(1,.01,.32,1);
-  transition: all 0.3s cubic-bezier(1,.01,.32,1); 
+  transition: 0.5s; 
 }
 .slide ul{
 
@@ -151,8 +154,8 @@
 .slide ul li img{
   width:800px;
   height:auto;
-  vertical-align:middle;
-  margin-top: -300px;
+  vertical-align:top;
+
 }
 #back{
   position: absolute;
