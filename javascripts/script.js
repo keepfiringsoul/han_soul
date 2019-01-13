@@ -19,7 +19,7 @@ function gestureStart() {
 
 
 var scene, screen, closeBt,t_box,imgBt,slideBox,mimgBt,ctBt;
-var item_Num = 17;
+var item_Num = 19;
 var pf = [];
 
 var block = {
@@ -41,6 +41,10 @@ var init = function() {
   ctBt = document.querySelector('#ctBt');
   left3 = document.querySelector('#left_3');
   logoBox = document.querySelector('#logoBox');
+    mail = document.querySelector('#mail');
+  tel = document.querySelector('#tel');
+    mailPop = document.querySelector('#mailPop');
+  telPop = document.querySelector('#telPop');
 
   screen.onclick = function(){
     screen.style['display'] = 'none';
@@ -73,6 +77,34 @@ var init = function() {
       left3.style['opacity'] = '0';
     },50);
   };
+
+//contact 부분 시작
+  mail.onclick = function(){
+    mailPop.style['display'] = 'block';
+    setTimeout(function(){
+      mailPop.style['opacity'] = '0.8';
+        },50);
+  };
+
+  mailPop.onclick = function(){
+    mailPop.style['display'] = 'none';
+    mailPop.style['opacity'] = '0';
+  };
+
+  tel.onclick = function(){
+    telPop.style['display'] = 'block';
+    setTimeout(function(){
+      telPop.style['opacity'] = '0.8';
+        },50);
+  };
+
+  telPop.onclick = function(){
+    telPop.style['display'] = 'none';
+    telPop.style['opacity'] = '0';
+  };
+
+
+//contact 부분 끝
 
   var contentsFill = function(d) {
     switch(d){
@@ -144,11 +176,19 @@ var init = function() {
       dp_box.innerHTML = "<img src=\"./images/16.jpg\">";
       t_box.innerHTML = "KMUVCD <br> Typograhpy3 ";
       break;
+          case pf[17] :
+      dp_box.innerHTML = "<img src=\"./images/17.jpg\">";
+      t_box.innerHTML = "KMUVCD <br> Typograhpy3 ";
+      break;
+          case pf[18] :
+      dp_box.innerHTML = "<img src=\"./images/18.jpg\">";
+      t_box.innerHTML = "KMUVCD <br> Typograhpy3 ";
+      break;
     }
     screen.style['display'] = 'block';
   };
 
-
+//개체 생성 시작
   for(var i=0;i<item_Num; i++){
 
     var d = document.createElement('li');
@@ -169,6 +209,7 @@ var init = function() {
     };
     
   }
+//개체 생성 끝
 
 //여기부터 슬라이드
 $(document).ready(function(){
@@ -187,7 +228,7 @@ $(document).ready(function(){
   val = $(".slide").attr("val"); //현재 이미지 번호를 가져옵니다
   mx = $(".slide").attr("mx");  //총 이미지 개수를 가져옵니다
   y1 = 0; //2018년의 시작
-  y2 = 16; //2019년의 시작
+  y2 = 18; //2019년의 시작
 
 
       //버튼을 클릭했을 때 함수 실행
@@ -234,19 +275,19 @@ $(document).ready(function(){
       }
 
       function year1() {
-
-
         imgs.animate({
           left:y1*-800+'px'
         });
-        $("#slide").attr('val',y1);
+        val=y1;
+        slideBox.attr('val',y1);
       }
-      function year2() {
 
+      function year2() {
         imgs.animate({
           left:y2*-800+'px'
         });
-        $("#slide").attr('val',y2);
+        slideBox.attr('val',y2);
+        val=y2;
       }
 
 

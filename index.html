@@ -5,6 +5,7 @@
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <script src="javascripts/script.js"></script>
+  <script src="javascripts/contact.js"></script>
   <link rel="stylesheet" href="stylesheets/style.css">
   <link rel="stylesheet" href="stylesheets/contact.css">
   <meta name="viewport" content="width=device-width">
@@ -36,15 +37,31 @@
       <div class="year" id="y2">2019</div>
     </div>
     <div id="left_4">
-      <div class="slide" val="0" mx=""><!-- 슬라이드시작 -->
+      <!-- 이미지 시작 -->
+      <div class="slide" val="0" mx="">
         <div id="back" class="arrows"></div>
         <ul>
         </ul>
         <div id="next" class="arrows"></div>
-      </div><!-- 슬라이드끝 -->
+      </div>
+      <!-- 이미지 끝 -->
+      <!--비디오 시작 -->
+      <div class="vslide" val="0" mx="">
+        <div id="back" class="arrows"></div>
+        <div id="vslideBox">
+          <div class="videos">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Pn79QTLMuLw?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="videos">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/97NXw693q10?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div id="next" class="arrows"></div>
+      </div>
+      <!--비디오 끝 -->
       <div id="logoBox">
-        <div class="logos" id="fb"></div>
-        <div class="logos" id="bh"></div>
+        <a href="javascript:fbOpen();"><div class="logos" id="fb"></div></a>
+        <a href="javascript:bhOpen();"><div class="logos" id="bh"></div></a>
         <div class="logos" id="mail"></div>
         <div class="logos" id="tel"></div>
       </div>
