@@ -21,23 +21,23 @@
 }
 
 #vback{
-/*  position: absolute;*/
-  left: 0;
-  z-index: 1;
+	/*  position: absolute;*/
+	left: 0;
+	z-index: 1;
 }
 
 #vback:hover{
-  cursor: url(http://cur.cursors-4u.net/others/oth-7/oth692.cur), auto !important; /* End http://www.cursors-4u.com */
+	cursor: url(http://cur.cursors-4u.net/others/oth-7/oth692.cur), auto !important; /* End http://www.cursors-4u.com */
 
 }
 
 #vnext{
-/*  position: absolute;*/
-  right: 0;
-  z-index: 1;
+	/*  position: absolute;*/
+	right: 0;
+	z-index: 1;
 
 }
 
 #vnext:hover{
- cursor: url(http://cur.cursors-4u.net/others/oth-7/oth689.cur), auto !important;/* End http://www.cursors-4u.com */
+	cursor: url(http://cur.cursors-4u.net/others/oth-7/oth689.cur), auto !important;/* End http://www.cursors-4u.com */
 }

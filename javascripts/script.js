@@ -44,7 +44,7 @@ var init = function() {
   ctBt = document.querySelector('#ctBt');
   main = document.querySelector('#main');
   mlogo = document.querySelector('#mlogo');
-  left3 = document.querySelector('#left_3');
+  imgYear = document.querySelector('#imgYear');
   logoBox = document.querySelector('#logoBox');
   mail = document.querySelector('#mail');
   tel = document.querySelector('#tel');
@@ -63,56 +63,63 @@ var init = function() {
 
   imgBt.onclick = function(){
     slideBox.style['display'] = 'block';
-    left3.style['display'] = 'block';
+    imgYear.style['display'] = 'block';
+    vidYear.style['display'] = 'none';
     logoBox.style['display'] = 'none';
     main.style['display'] = 'none';
     vslideBox.style['display'] = 'none';
     vslide.style['left'] = '0';
     setTimeout(function(){
       slideBox.style['opacity'] = '1';
-      left3.style['opacity'] = '1';
+      imgYear.style['opacity'] = '1';
+      vidYear.style['opacity'] = '0';
       logoBox.style['opacity'] = '0';
       main.style['opacity'] = '0';
-       vslideBox.style['opacity'] = '0';
+      vslideBox.style['opacity'] = '0';
     },50);
   };
 
   ctBt.onclick = function(){
-    left3.style['display'] = 'none';
+    imgYear.style['display'] = 'none';
+    vidYear.style['display'] = 'none';
     slideBox.style['display'] = 'none';
     main.style['display'] = 'none';
     vslideBox.style['display'] = 'none';
     logoBox.style['display'] = 'block';
-        slide.style['left'] = '0';
-        vslide.style['left'] = '0';
+    slide.style['left'] = '0';
+    vslide.style['left'] = '0';
     setTimeout(function(){
       logoBox.style['opacity'] = '1';
       main.style['opacity'] = '0';
-      left3.style['opacity'] = '0';
-      slideBox.style['opacity'] = '0';
-       vslideBox.style['opacity'] = '0';
-    },50);
-  };
-
-  mlogo.onclick = function(){
-    left3.style['display'] = 'none';
-    slideBox.style['display'] = 'none';
-    logoBox.style['display'] = 'none';
-    vslideBox.style['display'] = 'none';
-    main.style['display'] = 'block';
-        slide.style['left'] = '0';
-        vslide.style['left'] = '0';
-    setTimeout(function(){
-     logoBox.style['opacity'] = '0';
-      main.style['opacity'] = '1';
-      left3.style['opacity'] = '0';
+      imgYear.style['opacity'] = '0';
+      vidYear.style['opacity'] = '0';
       slideBox.style['opacity'] = '0';
       vslideBox.style['opacity'] = '0';
     },50);
   };
 
+  mlogo.onclick = function(){
+    imgYear.style['display'] = 'none';
+    vidYear.style['display'] = 'none';
+    slideBox.style['display'] = 'none';
+    logoBox.style['display'] = 'none';
+    vslideBox.style['display'] = 'none';
+    main.style['display'] = 'block';
+    slide.style['left'] = '0';
+    vslide.style['left'] = '0';
+    setTimeout(function(){
+     logoBox.style['opacity'] = '0';
+     main.style['opacity'] = '1';
+     imgYear.style['opacity'] = '0';
+     vidYear.style['opacity'] = '0';
+     slideBox.style['opacity'] = '0';
+     vslideBox.style['opacity'] = '0';
+   },50);
+  };
+
   mimgBt.onclick = function(){
-    left3.style['display'] = 'none';
+    imgYear.style['display'] = 'none';
+    vidYear.style['display'] = 'block';
     slideBox.style['display'] = 'none';
     logoBox.style['display'] = 'none';
     vslideBox.style['display'] = 'block';
@@ -120,11 +127,12 @@ var init = function() {
     slide.style['left'] = '0';
     setTimeout(function(){
      logoBox.style['opacity'] = '0';
-      main.style['opacity'] = '0';
-      left3.style['opacity'] = '0';
-      slideBox.style['opacity'] = '0';
-      vslideBox.style['opacity'] = '1';
-    },50);
+     main.style['opacity'] = '0';
+     imgYear.style['opacity'] = '0';
+     vidYear.style['opacity'] = '1';
+     slideBox.style['opacity'] = '0';
+     vslideBox.style['opacity'] = '1';
+   },50);
   };
 
 //contact 부분 시작
@@ -271,16 +279,17 @@ $(document).ready(function(){
   var y2;
 
   $( '.slide' ).attr( 'mx',item_Num );
- $( '#vslide' ).attr( 'mx',video_Num );
+  $( '#vslide' ).attr( 'mx',video_Num );
 
   imgs = $(".slide ul");
-  /* img_count = imgs.children().length;*/
   val = 0;//현재 이미지 번호를 가져옵니다
   y1 = 0; //2018년의 시작
   y2 = 18; //2019년의 시작
 
-vids = $("#vslideList");
+  vids = $("#vslideList");
   vval = 0;
+  vy1 = 0; //2018년의 시작
+  vy2 = 1; //2019년의 시작
 
 
       //버튼을 클릭했을 때 함수 실행
@@ -302,33 +311,48 @@ vids = $("#vslideList");
       $('#y2').click(function(){
         year2()
       });
+      $('#vy1').click(function(){
+        vyear1()
+      });
+      $('#vy2').click(function(){
+        vyear2()
+      });
 
 //이미지 시작
-      function back() {
-     /*   if(1<img_position){
-          imgs.animate({
-            left:'+=800px'
-          });
-          img_position--;
-        }*/
-        if( val <= 0 ){ val = 0;}
-        else{val--;}
-        imgs.animate({
-          left:val*-800+'px'
-        });
-      }
+function back() {
+  if( val <= 0 ){ val = 0;}
+  else{val--;}
+  imgs.animate({
+    left:val*-800+'px'
+  });
+}
 
-      function next() {
+function next() {
         if( val >= item_Num-1 ){ val == item_Num-1; } //현재이미지가 마지막 번호라면 마지막번호로 그냥 있습니다.
         else{ val++; }
         imgs.animate({
           left:val*-800+'px'
         });
       }
+
+      function year1() {
+        imgs.animate({
+          left:y1*-800+'px'
+        });
+        val=y1;
+      }
+
+      function year2() {
+        imgs.animate({
+          left:y2*-800+'px'
+        });
+        val=y2;
+      }
+
       //이미지 끝
 
       //비디오 시작
-       function vback() {
+      function vback() {
 
         if( vval <= 0 ){ vval = 0;}
         else{vval--;}
@@ -345,21 +369,24 @@ vids = $("#vslideList");
           left:vval*-800+'px'
         });
       }
+
+      function vyear1() {
+        vids.animate({
+          left:vy1*-800+'px'
+        });
+        vval=vy1;
+      }
+
+      function vyear2() {
+        vids.animate({
+          left:vy2*-800+'px'
+        });
+        vval=vy2;
+      }
+
       //비디오 끝
 
-      function year1() {
-        imgs.animate({
-          left:y1*-800+'px'
-        });
-        val=0;
-      }
-
-      function year2() {
-        imgs.animate({
-          left:y2*-800+'px'
-        });
-        val=y2;
-      }
+      
 
 
     });

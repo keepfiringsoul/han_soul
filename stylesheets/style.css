@@ -5,9 +5,9 @@ body{
 }
 
 #main{
-      line-height: 20px;
-      opacity: 1;
-      transition: 0.5s; 
+  line-height: 20px;
+  opacity: 1;
+  transition: 0.5s; 
 }
 
 
@@ -77,10 +77,15 @@ body{
   margin: 50px;
   position: fixed;
   left: 170px;
+
+}
+
+.years{
   display: none;
   transition: 0.5s; 
   opacity: 0;
 }
+
 
 #left_4{
   margin: 100px;
@@ -153,7 +158,7 @@ body{
 
 }
 #back{
-/*  position: absolute;*/
+  /*  position: absolute;*/
   left: 0;
   z-index: 1;
 }
@@ -164,7 +169,7 @@ body{
 }
 
 #next{
-/*  position: absolute;*/
+  /*  position: absolute;*/
   right: 0;
   z-index: 1;
 
