@@ -32,11 +32,11 @@
 
 #logoBox{
   display: none;
-      position: inherit;
-    top: 40%;
-    left: 40%;
-    opacity: 0;
-      transition: 0.5s; 
+  position: inherit;
+  top: 30%;
+  left: 35%;
+  opacity: 0;
+  transition: 0.5s; 
 }
 
 .logos:hover{
@@ -45,7 +45,7 @@
 
 .logos{
   display: inline-block;
-      margin: 5px;
+  margin: 5px;
 }
 
 #fb{
