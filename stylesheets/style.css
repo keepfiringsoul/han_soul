@@ -66,7 +66,7 @@ body{
 
 #left_2{
   position: fixed;
-  left: 140px;
+  left: 30%;
   bottom: 70px;
   width: 40px;
 
@@ -76,7 +76,7 @@ body{
 #left_3{
   margin: 50px;
   position: fixed;
-  left: 170px;
+  left: 35%;
 
 }
 
@@ -90,7 +90,7 @@ body{
 #left_4{
   margin: 100px;
   position: fixed;
-  left: 300px;
+  left: 45%;
 }
 
 
