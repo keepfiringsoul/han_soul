@@ -67,6 +67,7 @@ var init = function() {
     logoBox.style['display'] = 'none';
     main.style['display'] = 'none';
     vslideBox.style['display'] = 'none';
+    vslide.style['left'] = '0';
     setTimeout(function(){
       slideBox.style['opacity'] = '1';
       left3.style['opacity'] = '1';
@@ -82,6 +83,8 @@ var init = function() {
     main.style['display'] = 'none';
     vslideBox.style['display'] = 'none';
     logoBox.style['display'] = 'block';
+        slide.style['left'] = '0';
+        vslide.style['left'] = '0';
     setTimeout(function(){
       logoBox.style['opacity'] = '1';
       main.style['opacity'] = '0';
@@ -97,6 +100,8 @@ var init = function() {
     logoBox.style['display'] = 'none';
     vslideBox.style['display'] = 'none';
     main.style['display'] = 'block';
+        slide.style['left'] = '0';
+        vslide.style['left'] = '0';
     setTimeout(function(){
      logoBox.style['opacity'] = '0';
       main.style['opacity'] = '1';
@@ -112,6 +117,7 @@ var init = function() {
     logoBox.style['display'] = 'none';
     vslideBox.style['display'] = 'block';
     main.style['display'] = 'none';
+    slide.style['left'] = '0';
     setTimeout(function(){
      logoBox.style['opacity'] = '0';
       main.style['opacity'] = '0';
@@ -269,14 +275,12 @@ $(document).ready(function(){
 
   imgs = $(".slide ul");
   /* img_count = imgs.children().length;*/
-  val = $(".slide").attr("val"); //현재 이미지 번호를 가져옵니다
-  mx = $(".slide").attr("mx");  //총 이미지 개수를 가져옵니다
+  val = 0;//현재 이미지 번호를 가져옵니다
   y1 = 0; //2018년의 시작
   y2 = 18; //2019년의 시작
 
 vids = $("#vslideList");
-  vval = $("#vslide").attr("val"); //현재 이미지 번호를 가져옵니다
-  vmx = $("#vslide").attr("mx");  //총 이미지 개수를 가져옵니다
+  vval = 0;
 
 
       //버튼을 클릭했을 때 함수 실행
@@ -315,13 +319,7 @@ vids = $("#vslideList");
       }
 
       function next() {
-       /* if(img_count>img_position){
-          imgs.animate({
-            left:'-=800px'
-          });
-          img_position++;
-        }*/
-        if( val >= mx-1 ){ val == mx-1; } //현재이미지가 마지막 번호라면 마지막번호로 그냥 있습니다.
+        if( val >= item_Num-1 ){ val == item_Num-1; } //현재이미지가 마지막 번호라면 마지막번호로 그냥 있습니다.
         else{ val++; }
         imgs.animate({
           left:val*-800+'px'
@@ -341,7 +339,7 @@ vids = $("#vslideList");
       
       function vnext() {
 
-        if( vval >= vmx-1 ){ vval == vmx-1; } //현재이미지가 마지막 번호라면 마지막번호로 그냥 있습니다.
+        if( vval >= video_Num-1 ){ vval == video_Num-1; } //현재이미지가 마지막 번호라면 마지막번호로 그냥 있습니다.
         else{ vval++; }
         vids.animate({
           left:vval*-800+'px'
@@ -353,15 +351,13 @@ vids = $("#vslideList");
         imgs.animate({
           left:y1*-800+'px'
         });
-        val=y1;
-        slideBox.attr('val',y1);
+        val=0;
       }
 
       function year2() {
         imgs.animate({
           left:y2*-800+'px'
         });
-        slideBox.attr('val',y2);
         val=y2;
       }
 
