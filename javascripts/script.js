@@ -20,6 +20,7 @@ function gestureStart() {
 
 var scene, screen, closeBt,t_box,imgBt,slideBox,mimgBt,ctBt;
 var item_Num = 19;
+var video_Num = 2;
 var pf = [];
 
 var block = {
@@ -32,18 +33,22 @@ var block = {
 var init = function() {
 
   slide = document.querySelector('.slide ul');
+  slideBox = document.querySelector('.slide');
   screen = document.querySelector('#screen');
   dp_box = document.querySelector('#dp_box');
   t_box = document.querySelector('#t_box');
   imgBt = document.querySelector('#imgBt');
-  slideBox = document.querySelector('.slide');
+  vslideBox = document.querySelector('#vslide');
+  vslide = document.querySelector('#vslideList');
   mimgBt = document.querySelector('#mimgBt');
   ctBt = document.querySelector('#ctBt');
+  main = document.querySelector('#main');
+  mlogo = document.querySelector('#mlogo');
   left3 = document.querySelector('#left_3');
   logoBox = document.querySelector('#logoBox');
-    mail = document.querySelector('#mail');
+  mail = document.querySelector('#mail');
   tel = document.querySelector('#tel');
-    mailPop = document.querySelector('#mailPop');
+  mailPop = document.querySelector('#mailPop');
   telPop = document.querySelector('#telPop');
 
   screen.onclick = function(){
@@ -60,155 +65,193 @@ var init = function() {
     slideBox.style['display'] = 'block';
     left3.style['display'] = 'block';
     logoBox.style['display'] = 'none';
+    main.style['display'] = 'none';
+    vslideBox.style['display'] = 'none';
     setTimeout(function(){
       slideBox.style['opacity'] = '1';
       left3.style['opacity'] = '1';
       logoBox.style['opacity'] = '0';
+      main.style['opacity'] = '0';
+       vslideBox.style['opacity'] = '0';
     },50);
   };
 
   ctBt.onclick = function(){
     left3.style['display'] = 'none';
     slideBox.style['display'] = 'none';
+    main.style['display'] = 'none';
+    vslideBox.style['display'] = 'none';
     logoBox.style['display'] = 'block';
     setTimeout(function(){
       logoBox.style['opacity'] = '1';
-      slideBox.style['opacity'] = '0';
+      main.style['opacity'] = '0';
       left3.style['opacity'] = '0';
+      slideBox.style['opacity'] = '0';
+       vslideBox.style['opacity'] = '0';
+    },50);
+  };
+
+  mlogo.onclick = function(){
+    left3.style['display'] = 'none';
+    slideBox.style['display'] = 'none';
+    logoBox.style['display'] = 'none';
+    vslideBox.style['display'] = 'none';
+    main.style['display'] = 'block';
+    setTimeout(function(){
+     logoBox.style['opacity'] = '0';
+      main.style['opacity'] = '1';
+      left3.style['opacity'] = '0';
+      slideBox.style['opacity'] = '0';
+      vslideBox.style['opacity'] = '0';
+    },50);
+  };
+
+  mimgBt.onclick = function(){
+    left3.style['display'] = 'none';
+    slideBox.style['display'] = 'none';
+    logoBox.style['display'] = 'none';
+    vslideBox.style['display'] = 'block';
+    main.style['display'] = 'none';
+    setTimeout(function(){
+     logoBox.style['opacity'] = '0';
+      main.style['opacity'] = '0';
+      left3.style['opacity'] = '0';
+      slideBox.style['opacity'] = '0';
+      vslideBox.style['opacity'] = '1';
     },50);
   };
 
 //contact 부분 시작
-  mail.onclick = function(){
-    mailPop.style['display'] = 'block';
-    setTimeout(function(){
-      mailPop.style['opacity'] = '0.8';
-        },50);
-  };
+mail.onclick = function(){
+  mailPop.style['display'] = 'block';
+  setTimeout(function(){
+    mailPop.style['opacity'] = '0.8';
+  },50);
+};
 
-  mailPop.onclick = function(){
-    mailPop.style['display'] = 'none';
-    mailPop.style['opacity'] = '0';
-  };
+mailPop.onclick = function(){
+  mailPop.style['display'] = 'none';
+  mailPop.style['opacity'] = '0';
+};
 
-  tel.onclick = function(){
-    telPop.style['display'] = 'block';
-    setTimeout(function(){
-      telPop.style['opacity'] = '0.8';
-        },50);
-  };
+tel.onclick = function(){
+  telPop.style['display'] = 'block';
+  setTimeout(function(){
+    telPop.style['opacity'] = '0.8';
+  },50);
+};
 
-  telPop.onclick = function(){
-    telPop.style['display'] = 'none';
-    telPop.style['opacity'] = '0';
-  };
+telPop.onclick = function(){
+  telPop.style['display'] = 'none';
+  telPop.style['opacity'] = '0';
+};
 
 
 //contact 부분 끝
 
-  var contentsFill = function(d) {
-    switch(d){
-      case pf[0] :
-      dp_box.innerHTML = "<img src=\"./images/0.jpg\">";
-      t_box.innerHTML = "2017 <br> Figure Diary <br> 집안을 돌아다니는 물건들 ";
-      break;
-      case pf[1] :
-      dp_box.innerHTML = "<img src=\"./images/1.jpg\">";
-      t_box.innerHTML = "2017 <br> Figure Diary <br> 집안을 돌아다니는 물건들";
-      break;
-      case pf[2] :
-      dp_box.innerHTML = "<img src=\"./images/2.jpg\">";
-      t_box.innerHTML = "2017 <br> Figure Diary <br> 집밖의 버려진 물건들 ";
-      break;
-      case pf[3] :
-      dp_box.innerHTML = "<img src=\"./images/3.jpg\">";
-      t_box.innerHTML = "Figure Diary <br> 집밖의 버려진 물건들 ";
-      break;
-      case pf[4] :
-      dp_box.innerHTML = "<img src=\"./images/4.jpg\">";
-      t_box.innerHTML = "Figure Diary <br> 집밖의 버려진 물건들 ";
-      break;
-      case pf[5] :
-      dp_box.innerHTML = "<img src=\"./images/5.jpg\">";
-      t_box.innerHTML = "KMUVCD <br> Typograhpy3 ";
-      break;
-      case pf[6] :
-      dp_box.innerHTML = "<img src=\"./images/6.jpg\">";
-      t_box.innerHTML = "KMUVCD <br> Typograhpy3 ";
-      break;
-      case pf[7] :
-      dp_box.innerHTML = "<img src=\"./images/7.jpg\">";
-      t_box.innerHTML = "KMUVCD <br> Typograhpy3 ";
-      break;
-      case pf[8] :
-      dp_box.innerHTML = "<img src=\"./images/8.jpg\">";
-      t_box.innerHTML = "KMUVCD <br> Typograhpy3 ";
-      break;
-      case pf[9] :
-      dp_box.innerHTML = "<img src=\"./images/9.jpg\">";
-      t_box.innerHTML = "KMUVCD <br> Typograhpy3 ";
-      break;
-      case pf[10] :
-      dp_box.innerHTML = "<img src=\"./images/10.jpg\">";
-      t_box.innerHTML = "KMUVCD <br> Typograhpy3 ";
-      break;
-      case pf[11] :
-      dp_box.innerHTML = "<img src=\"./images/11.jpg\">";
-      t_box.innerHTML = "KMUVCD <br> Typograhpy3 ";
-      break;
-      case pf[12] :
-      dp_box.innerHTML = "<img src=\"./images/12.jpg\">";
-      t_box.innerHTML = "KMUVCD <br> Typograhpy3 ";
-      break;
-      case pf[13] :
-      dp_box.innerHTML = "<img src=\"./images/13.jpg\">";
-      t_box.innerHTML = "KMUVCD <br> Typograhpy3 ";
-      break;
-      case pf[14] :
-      dp_box.innerHTML = "<img src=\"./images/14.jpg\">";
-      t_box.innerHTML = "KMUVCD <br> Typograhpy3 ";
-      break;
-      case pf[15] :
-      dp_box.innerHTML = "<img src=\"./images/15.jpg\">";
-      t_box.innerHTML = "KMUVCD <br> Typograhpy3 ";
-      break;
-      case pf[16] :
-      dp_box.innerHTML = "<img src=\"./images/16.jpg\">";
-      t_box.innerHTML = "KMUVCD <br> Typograhpy3 ";
-      break;
-          case pf[17] :
-      dp_box.innerHTML = "<img src=\"./images/17.jpg\">";
-      t_box.innerHTML = "KMUVCD <br> Typograhpy3 ";
-      break;
-          case pf[18] :
-      dp_box.innerHTML = "<img src=\"./images/18.jpg\">";
-      t_box.innerHTML = "KMUVCD <br> Typograhpy3 ";
-      break;
-    }
-    screen.style['display'] = 'block';
-  };
+var contentsFill = function(d) {
+  switch(d){
+    case pf[0] :
+    dp_box.innerHTML = "<img src=\"./images/0.jpg\">";
+    t_box.innerHTML = "2018 <br> Figure Diary <br> 집안을 돌아다니는 물건들";
+    break;
+    case pf[1] :
+    dp_box.innerHTML = "<img src=\"./images/1.jpg\">";
+    t_box.innerHTML = "2018 <br> Figure Diary <br> 집안을 돌아다니는 물건들";
+    break;
+    case pf[2] :
+    dp_box.innerHTML = "<img src=\"./images/2.jpg\">";
+    t_box.innerHTML = "2018 <br> Figure Diary <br> 집밖의 버려진 물건들";
+    break;
+    case pf[3] :
+    dp_box.innerHTML = "<img src=\"./images/3.jpg\">";
+    t_box.innerHTML = "2018 <br>Figure Diary <br> 집밖의 버려진 물건들";
+    break;
+    case pf[4] :
+    dp_box.innerHTML = "<img src=\"./images/4.jpg\">";
+    t_box.innerHTML = "2018 <br>Figure Diary <br> 집밖의 버려진 물건들";
+    break;
+    case pf[5] :
+    dp_box.innerHTML = "<img src=\"./images/5.jpg\">";
+    t_box.innerHTML = "2018 <br>Figure Diary <br> 집밖의 버려진 물건들";
+    break;
+    case pf[6] :
+    dp_box.innerHTML = "<img src=\"./images/6.jpg\">";
+    t_box.innerHTML = "2018 <br>Figure Diary <br> 집밖의 버려진 물건들";
+    break;
+    case pf[7] :
+    dp_box.innerHTML = "<img src=\"./images/7.jpg\">";
+    t_box.innerHTML = "2018 <br>Figure Diary <br> 옮겨진 동네의 버려진 곳들";
+    break;
+    case pf[8] :
+    dp_box.innerHTML = "<img src=\"./images/8.jpg\">";
+    t_box.innerHTML = "2018 <br>Figure Diary <br> 옮겨진 동네의 버려진 곳들";
+    break;
+    case pf[9] :
+    dp_box.innerHTML = "<img src=\"./images/9.jpg\">";
+    t_box.innerHTML = "2018 <br>Figure Diary <br> 옮겨진 동네의 살아나는 곳들";
+    break;
+    case pf[10] :
+    dp_box.innerHTML = "<img src=\"./images/10.jpg\">";
+    t_box.innerHTML = "2018 <br>Figure Diary <br> 옮겨진 동네의 살아나는 곳들";
+    break;
+    case pf[11] :
+    dp_box.innerHTML = "<img src=\"./images/11.jpg\">";
+    t_box.innerHTML = "2018 <br>Figure Diary <br> 옮겨진 동네의 오래된 곳들";
+    break;
+    case pf[12] :
+    dp_box.innerHTML = "<img src=\"./images/12.jpg\">";
+    t_box.innerHTML = "2018 <br>Figure Diary <br> 아버지의 공간들";
+    break;
+    case pf[13] :
+    dp_box.innerHTML = "<img src=\"./images/13.jpg\">";
+    t_box.innerHTML = "2018 <br>Figure Diary <br> 옮겨진 동네의 버려진 곳들";
+    break;
+    case pf[14] :
+    dp_box.innerHTML = "<img src=\"./images/14.jpg\">";
+    t_box.innerHTML = "2018 <br>Figure Diary <br> 옮겨진 동네의 오래된 곳들 ";
+    break;
+    case pf[15] :
+    dp_box.innerHTML = "<img src=\"./images/15.jpg\">";
+    t_box.innerHTML = "2018 <br>Figure Diary <br> 옮겨진 동네의 살아나는 곳들 ";
+    break;
+    case pf[16] :
+    dp_box.innerHTML = "<img src=\"./images/16.jpg\">";
+    t_box.innerHTML = "2018 <br>2017 <br> Figure Diary <br> 집안을 돌아다니는 물건들 ";
+    break;
+    case pf[17] :
+    dp_box.innerHTML = "<img src=\"./images/17.jpg\">";
+    t_box.innerHTML = "2018 <br>2017 <br> Figure Diary <br> 집안을 돌아다니는 물건들";
+    break;
+    case pf[18] :
+    dp_box.innerHTML = "<img src=\"./images/18.jpg\">";
+    t_box.innerHTML = "2019 <br>Figure Diary <br> 아버지의 공간들";
+    break;
+  }
+  screen.style['display'] = 'block';
+};
 
 //개체 생성 시작
-  for(var i=0;i<item_Num; i++){
+for(var i=0;i<item_Num; i++){
 
-    var d = document.createElement('li');
-    d.innerHTML = "<img src=\"./images/"+i+".jpg\">";
-    slide.appendChild(d);
+  var d = document.createElement('li');
+  d.innerHTML = "<img src=\"./images/"+i+".jpg\">";
+  slide.appendChild(d);
 
-    pf.push(d);
-    d.onclick= function() {
-      contentsFill(this);
-      screen.style['display'] = 'block';
-      dp_box.style['display'] = 'block';
-      t_box.style['display'] = 'block';
-      setTimeout(function(){
-        screen.style['opacity'] = '0.8';
-        dp_box.style['opacity'] = '1';
-        t_box.style['opacity'] = '1';
-      },50);    
-    };
-    
-  }
+  pf.push(d);
+  d.onclick= function() {
+    contentsFill(this);
+    screen.style['display'] = 'block';
+    dp_box.style['display'] = 'block';
+    t_box.style['display'] = 'block';
+    setTimeout(function(){
+      screen.style['opacity'] = '0.8';
+      dp_box.style['opacity'] = '1';
+      t_box.style['opacity'] = '1';
+    },50);    
+  };
+
+}
 //개체 생성 끝
 
 //여기부터 슬라이드
@@ -222,6 +265,7 @@ $(document).ready(function(){
   var y2;
 
   $( '.slide' ).attr( 'mx',item_Num );
+ $( '#vslide' ).attr( 'mx',video_Num );
 
   imgs = $(".slide ul");
   /* img_count = imgs.children().length;*/
@@ -229,6 +273,10 @@ $(document).ready(function(){
   mx = $(".slide").attr("mx");  //총 이미지 개수를 가져옵니다
   y1 = 0; //2018년의 시작
   y2 = 18; //2019년의 시작
+
+vids = $("#vslideList");
+  vval = $("#vslide").attr("val"); //현재 이미지 번호를 가져옵니다
+  vmx = $("#vslide").attr("mx");  //총 이미지 개수를 가져옵니다
 
 
       //버튼을 클릭했을 때 함수 실행
@@ -238,6 +286,12 @@ $(document).ready(function(){
       $('#next').click(function () {
         next();
       });
+      $('#vback').click(function () {
+        vback();
+      });
+      $('#vnext').click(function () {
+        vnext();
+      });
       $('#y1').click(function(){
         year1()
       });
@@ -245,7 +299,7 @@ $(document).ready(function(){
         year2()
       });
 
-
+//이미지 시작
       function back() {
      /*   if(1<img_position){
           imgs.animate({
@@ -255,11 +309,11 @@ $(document).ready(function(){
         }*/
         if( val <= 0 ){ val = 0;}
         else{val--;}
-
         imgs.animate({
           left:val*-800+'px'
         });
       }
+
       function next() {
        /* if(img_count>img_position){
           imgs.animate({
@@ -273,6 +327,27 @@ $(document).ready(function(){
           left:val*-800+'px'
         });
       }
+      //이미지 끝
+
+      //비디오 시작
+       function vback() {
+
+        if( vval <= 0 ){ vval = 0;}
+        else{vval--;}
+        vids.animate({
+          left:vval*-800+'px'
+        });
+      }
+      
+      function vnext() {
+
+        if( vval >= vmx-1 ){ vval == vmx-1; } //현재이미지가 마지막 번호라면 마지막번호로 그냥 있습니다.
+        else{ vval++; }
+        vids.animate({
+          left:vval*-800+'px'
+        });
+      }
+      //비디오 끝
 
       function year1() {
         imgs.animate({
