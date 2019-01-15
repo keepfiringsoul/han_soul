@@ -20,7 +20,7 @@ function gestureStart() {
 
 var scene, screen, closeBt,t_box,imgBt,slideBox,mimgBt,ctBt;
 var item_Num = 19;
-var video_Num = 2;
+var video_Num = 4;
 var pf = [];
 
 var block = {
@@ -289,7 +289,7 @@ $(document).ready(function(){
   vids = $("#vslideList");
   vval = 0;
   vy1 = 0; //2018년의 시작
-  vy2 = 1; //2019년의 시작
+  vy2 = 2; //2019년의 시작
 
 
       //버튼을 클릭했을 때 함수 실행
