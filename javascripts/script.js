@@ -68,7 +68,7 @@ var init = function() {
     logoBox.style['display'] = 'none';
     main.style['display'] = 'none';
     vslideBox.style['display'] = 'none';
-    vslide.style['left'] = '0';
+   vzero();
     setTimeout(function(){
       slideBox.style['opacity'] = '1';
       imgYear.style['opacity'] = '1';
@@ -86,8 +86,10 @@ var init = function() {
     main.style['display'] = 'none';
     vslideBox.style['display'] = 'none';
     logoBox.style['display'] = 'block';
-    slide.style['left'] = '0';
-    vslide.style['left'] = '0';
+/*    slide.style['left'] = '0';
+    vslide.style['left'] = '0';*/
+    imgzero();
+    vzero();
     setTimeout(function(){
       logoBox.style['opacity'] = '1';
       main.style['opacity'] = '0';
@@ -105,8 +107,10 @@ var init = function() {
     logoBox.style['display'] = 'none';
     vslideBox.style['display'] = 'none';
     main.style['display'] = 'block';
-    slide.style['left'] = '0';
-    vslide.style['left'] = '0';
+/*    slide.style['left'] = '0';
+    vslide.style['left'] = '0';*/
+    imgzero();
+    vzero();
     setTimeout(function(){
      logoBox.style['opacity'] = '0';
      main.style['opacity'] = '1';
@@ -124,7 +128,7 @@ var init = function() {
     logoBox.style['display'] = 'none';
     vslideBox.style['display'] = 'block';
     main.style['display'] = 'none';
-    slide.style['left'] = '0';
+   imgzero();
     setTimeout(function(){
      logoBox.style['opacity'] = '0';
      main.style['opacity'] = '0';
@@ -269,17 +273,16 @@ for(var i=0;i<item_Num; i++){
 //개체 생성 끝
 
 //여기부터 슬라이드
-$(document).ready(function(){
+/*$(document).ready(function(){*/
   var imgs;
-  var img_count;
-  var img_position = 1;
+  var vids;
   var val;
-  var mx;
   var y1;
   var y2;
+  var vval;
+  var vy1;
+  var vy2;
 
-  $( '.slide' ).attr( 'mx',item_Num );
-  $( '#vslide' ).attr( 'mx',video_Num );
 
   imgs = $(".slide ul");
   val = 0;//현재 이미지 번호를 가져옵니다
@@ -317,6 +320,8 @@ $(document).ready(function(){
       $('#vy2').click(function(){
         vyear2()
       });
+ 
+
 
 //이미지 시작
 function back() {
@@ -347,6 +352,13 @@ function next() {
           left:y2*-800+'px'
         });
         val=y2;
+      }
+
+       function imgzero() {
+        imgs.animate({
+          left:'0px'
+        });
+        val=0;
       }
 
       //이미지 끝
@@ -384,12 +396,20 @@ function next() {
         vval=vy2;
       }
 
+      function vzero() {
+        vids.animate({
+          left:'0px'
+        });
+        vval=0;
+      }
+
+
       //비디오 끝
 
       
 
 
-    });
+   /* });*/
   //여기까지 슬라이드
   
 };
