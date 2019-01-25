@@ -259,8 +259,6 @@ var contentsFill = function(d) {
     break;
     case pf[22] :
     dp_box.innerHTML = "<img src=\"./images/22.jpg\">";
-    t_box.innerHTML = "2019 <br>Figure Diary <br> 집밖의 풍경들";
-    break;
   }
   screen.style['display'] = 'block';
 };
