@@ -19,7 +19,7 @@ function gestureStart() {
 
 
 var scene, screen, closeBt,t_box,imgBt,slideBox,mimgBt,ctBt;
-var item_Num = 21;
+var item_Num = 23;
 var video_Num = 5;
 var pf = [];
 
