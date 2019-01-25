@@ -68,7 +68,7 @@ var init = function() {
     logoBox.style['display'] = 'none';
     main.style['display'] = 'none';
     vslideBox.style['display'] = 'none';
-   vzero();
+    vzero();
     setTimeout(function(){
       slideBox.style['opacity'] = '1';
       imgYear.style['opacity'] = '1';
@@ -87,57 +87,57 @@ var init = function() {
     vslideBox.style['display'] = 'none';
     logoBox.style['display'] = 'block';
 /*    slide.style['left'] = '0';
-    vslide.style['left'] = '0';*/
-    imgzero();
-    vzero();
-    setTimeout(function(){
-      logoBox.style['opacity'] = '1';
-      main.style['opacity'] = '0';
-      imgYear.style['opacity'] = '0';
-      vidYear.style['opacity'] = '0';
-      slideBox.style['opacity'] = '0';
-      vslideBox.style['opacity'] = '0';
-    },50);
-  };
+vslide.style['left'] = '0';*/
+imgzero();
+vzero();
+setTimeout(function(){
+  logoBox.style['opacity'] = '1';
+  main.style['opacity'] = '0';
+  imgYear.style['opacity'] = '0';
+  vidYear.style['opacity'] = '0';
+  slideBox.style['opacity'] = '0';
+  vslideBox.style['opacity'] = '0';
+},50);
+};
 
-  mlogo.onclick = function(){
-    imgYear.style['display'] = 'none';
-    vidYear.style['display'] = 'none';
-    slideBox.style['display'] = 'none';
-    logoBox.style['display'] = 'none';
-    vslideBox.style['display'] = 'none';
-    main.style['display'] = 'block';
+mlogo.onclick = function(){
+  imgYear.style['display'] = 'none';
+  vidYear.style['display'] = 'none';
+  slideBox.style['display'] = 'none';
+  logoBox.style['display'] = 'none';
+  vslideBox.style['display'] = 'none';
+  main.style['display'] = 'block';
 /*    slide.style['left'] = '0';
-    vslide.style['left'] = '0';*/
-    imgzero();
-    vzero();
-    setTimeout(function(){
-     logoBox.style['opacity'] = '0';
-     main.style['opacity'] = '1';
-     imgYear.style['opacity'] = '0';
-     vidYear.style['opacity'] = '0';
-     slideBox.style['opacity'] = '0';
-     vslideBox.style['opacity'] = '0';
-   },50);
-  };
+vslide.style['left'] = '0';*/
+imgzero();
+vzero();
+setTimeout(function(){
+ logoBox.style['opacity'] = '0';
+ main.style['opacity'] = '1';
+ imgYear.style['opacity'] = '0';
+ vidYear.style['opacity'] = '0';
+ slideBox.style['opacity'] = '0';
+ vslideBox.style['opacity'] = '0';
+},50);
+};
 
-  mimgBt.onclick = function(){
-    imgYear.style['display'] = 'none';
-    vidYear.style['display'] = 'block';
-    slideBox.style['display'] = 'none';
-    logoBox.style['display'] = 'none';
-    vslideBox.style['display'] = 'block';
-    main.style['display'] = 'none';
-   imgzero();
-    setTimeout(function(){
-     logoBox.style['opacity'] = '0';
-     main.style['opacity'] = '0';
-     imgYear.style['opacity'] = '0';
-     vidYear.style['opacity'] = '1';
-     slideBox.style['opacity'] = '0';
-     vslideBox.style['opacity'] = '1';
-   },50);
-  };
+mimgBt.onclick = function(){
+  imgYear.style['display'] = 'none';
+  vidYear.style['display'] = 'block';
+  slideBox.style['display'] = 'none';
+  logoBox.style['display'] = 'none';
+  vslideBox.style['display'] = 'block';
+  main.style['display'] = 'none';
+  imgzero();
+  setTimeout(function(){
+   logoBox.style['opacity'] = '0';
+   main.style['opacity'] = '0';
+   imgYear.style['opacity'] = '0';
+   vidYear.style['opacity'] = '1';
+   slideBox.style['opacity'] = '0';
+   vslideBox.style['opacity'] = '1';
+ },50);
+};
 
 //contact 부분 시작
 mail.onclick = function(){
@@ -245,12 +245,20 @@ var contentsFill = function(d) {
     dp_box.innerHTML = "<img src=\"./images/18.jpg\">";
     t_box.innerHTML = "2019 <br>Figure Diary <br> 아버지의 공간들";
     break;
-     case pf[19] :
-    dp_box.innerHTML = "<img src=\"./images/18.jpg\">";
+    case pf[19] :
+    dp_box.innerHTML = "<img src=\"./images/19.jpg\">";
     t_box.innerHTML = "2019 <br>Figure Diary <br> 집밖의 풍경들";
     break;
-     case pf[20] :
-    dp_box.innerHTML = "<img src=\"./images/18.jpg\">";
+    case pf[20] :
+    dp_box.innerHTML = "<img src=\"./images/20.jpg\">";
+    t_box.innerHTML = "2019 <br>Figure Diary <br> 집밖의 풍경들";
+    break;
+    case pf[21] :
+    dp_box.innerHTML = "<img src=\"./images/21.jpg\">";
+    t_box.innerHTML = "2019 <br>Figure Diary <br> 집밖의 풍경들";
+    break;
+    case pf[22] :
+    dp_box.innerHTML = "<img src=\"./images/22.jpg\">";
     t_box.innerHTML = "2019 <br>Figure Diary <br> 집밖의 풍경들";
     break;
   }
@@ -328,7 +336,7 @@ for(var i=0;i<item_Num; i++){
       $('#vy2').click(function(){
         vyear2()
       });
- 
+      
 
 
 //이미지 시작
@@ -362,7 +370,7 @@ function next() {
         val=y2;
       }
 
-       function imgzero() {
+      function imgzero() {
         imgs.animate({
           left:'0px'
         });
@@ -417,7 +425,7 @@ function next() {
       
 
 
-   /* });*/
+      /* });*/
   //여기까지 슬라이드
   
 };
