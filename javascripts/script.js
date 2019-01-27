@@ -19,7 +19,7 @@ function gestureStart() {
 
 
 var scene, screen, closeBt,t_box,imgBt,slideBox,mimgBt,ctBt;
-var item_Num = 23;
+var item_Num = 25;
 var video_Num = 5;
 var pf = [];
 
@@ -259,6 +259,14 @@ var contentsFill = function(d) {
     break;
     case pf[22] :
     dp_box.innerHTML = "<img src=\"./images/22.jpg\">";
+    t_box.innerHTML = "2019 <br>Figure Diary <br> 집밖의 풍경들";
+    break;
+     case pf[23] :
+    dp_box.innerHTML = "<img src=\"./images/23.jpg\">";
+    t_box.innerHTML = "2019 <br>Figure Diary <br> 집밖의 풍경들";
+    break;
+     case pf[24] :
+    dp_box.innerHTML = "<img src=\"./images/24.jpg\">";
     t_box.innerHTML = "2019 <br>Figure Diary <br> 집밖의 풍경들";
     break;
   }
